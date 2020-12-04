@@ -1,0 +1,48 @@
+* {
+    border: red;
+    border-style: solid;
+    background-color: black;
+}
+/* navigation styling */ 
+.nav {
+    display: flex;
+    background-color: yellow;
+    padding: 20px;
+    position: fixed;
+}
+.nav_link {
+    color: thistle;
+    font-family: Calluna;
+    font-size: 30px;
+    text-decoration: none;
+}
+/* Central Menu Styling */
+.flex_container {
+    display: flex;
+    flex-direction: column;
+    padding: 165px;
+}
+
+.menu {
+    padding: 80px
+}
+.about, .work, .misc {
+    padding: 5px;
+} 
+.menu_abt, .menu_work, .menu_misc {
+    font-family: Calluna;
+    text-decoration: none;
+    color: #F9F7EE;
+    font-size: 70px;
+}
+/*
+a {
+    font-family: Calluna;
+    text-decoration: none;
+    color: #F9F7EE;
+    font-size: 70px;
+}
+*/
+a:hover {
+    color: burlywood;
+}
