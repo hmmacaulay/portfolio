@@ -1,38 +1,63 @@
-* {
+
+ /** {
     border: red;
     border-style: solid;
-    background-color: black;
 }
+*/
+body {
+    height: 100%;
+    margin: 0;
+}
+.background_image {
+    background-image: url('website_images/about_bckgrnd.png');
+    background-color: E5E5E5;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-position: center;
+}
+/*
+hero_image {
+    background-image: url();
+    max-width: 100%;
+    background-color: #d60606; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 /* navigation styling */ 
 .nav {
     display: flex;
-    background-color: yellow;
-    padding: 20px;
     position: fixed;
+    padding: 10px;
 }
 .nav_link {
-    color: thistle;
+    color: white;
     font-family: Calluna;
-    font-size: 30px;
+    font-size: 50px;
     text-decoration: none;
+    padding: 10px;
 }
 /* Central Menu Styling */
 .flex_container {
     display: flex;
     flex-direction: column;
     padding: 165px;
+    /*background-color: tomato;*/
 }
 
 .menu {
     padding: 80px
 }
 .about, .work, .misc {
-    padding: 5px;
+    padding: 0px;
 } 
 .menu_abt, .menu_work, .menu_misc {
     font-family: Calluna;
     text-decoration: none;
-    color: #F9F7EE;
+    color: #706262;
     font-size: 70px;
 }
 /*
@@ -44,5 +69,5 @@ a {
 }
 */
 a:hover {
-    color: burlywood;
+    color: #FBE075;
 }
