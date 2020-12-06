@@ -1,21 +1,24 @@
 
- /** {
+* {
     border: red;
     border-style: solid;
 }
-*/
-body {
+html {
     height: 100%;
-    margin: 0;
 }
-.background_image {
+body {
+    min-height: 600px;
+    height: 100vh;
+    margin: 0;
+} 
+.hero_image {
     background-image: url('website_images/about_bckgrnd.png');
     background-color: E5E5E5;
-    height: auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;  
     background-position: center;
+    height: auto;
 }
 /*
 hero_image {
@@ -41,16 +44,33 @@ hero_image {
     padding: 10px;
 }
 /* Central Menu Styling */
-.flex_container {
-    display: flex;
+/*.flex_container {
+    /*display: flex;
     flex-direction: column;
     padding: 165px;
-    /*background-color: tomato;*/
-}
-
+    background-color: tomato;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin: 165px;
+    z-index: 100;
+} 
+*/
 .menu {
-    padding: 80px
-}
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0px 20%;
+    top: 200px;
+    z-index: 100;
+} 
 .about, .work, .misc {
     padding: 0px;
 } 
