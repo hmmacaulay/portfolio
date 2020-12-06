@@ -1,16 +1,62 @@
 
+/* ---------------------basics ----------------------*/
+/*
 * {
     border: red;
     border-style: solid;
 }
+*/
+/* ---------------------basics ----------------------*/
+
 html {
     background-color: #F6F2F3;
     height: 100vh;
 }
 body {
-    margin: 0;
     height: 100vh;
+    margin: 0;
 } 
+h1 {
+    font-family: Calluna;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: Calluna;
+    font-size: 30px; 
+}
+a:hover {
+    color: #FBE075;
+}
+
+*/
+/* ------------------ navigation -------------------- */ 
+.nav {
+    display: flex;
+    position: fixed;
+    padding: 10px;
+}
+.nav_link {
+    color: white;
+    font-family: Calluna;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 60vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#footer_item {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/* ------------------homepage -----------------------*/ 
 .hero_image {
     background-image: url('website_images/about_bckgrnd.png');
     background-size: cover;
@@ -30,18 +76,6 @@ hero_image {
     background-size: cover;
 }*/
 /* navigation styling */ 
-.nav {
-    display: flex;
-    position: fixed;
-    padding: 10px;
-}
-.nav_link {
-    color: white;
-    font-family: Calluna;
-    font-size: 50px;
-    text-decoration: none;
-    padding: 10px;
-}
 /* Central Menu Styling */
 /*.flex_container {
     /*display: flex;
@@ -86,10 +120,8 @@ a {
     font-size: 70px;
 }
 */
-a:hover {
-    color: #FBE075;
-}
-/*--- about me page */
+
+/* ------------------about me page -----------------------*/ 
 
 /*
 .aboutMeImage {
@@ -112,13 +144,6 @@ a:hover {
     "aboutMeImage"
     "aboutMeImage"
     "introP"; 
-}
-.miscGrid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 100px 10%;
-    grid-template-areas: 
 }
 
 #aboutMeImage {
@@ -143,17 +168,16 @@ a:hover {
         "introP"; 
     }
 }
+/* ------------------misc page -----------------------*/ 
+
+.miscGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 100px 10%;
+    grid-template-areas: 
+}
 
 #introP {
     grid-area: introP;
-}
-
-h1 {
-    font-family: Calluna;
-    font-size: 50px;
-}
-
-h2 {
-    font-family: Calluna;
-    font-size: 30px; 
 }
