@@ -4,21 +4,20 @@
     border-style: solid;
 }
 html {
-    height: 100%;
+    background-color: #F6F2F3;
+    height: 100vh;
 }
 body {
-    min-height: 600px;
-    height: 100vh;
     margin: 0;
+    height: 100vh;
 } 
 .hero_image {
     background-image: url('website_images/about_bckgrnd.png');
-    background-color: #F6F2F3;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;  
-    background-position: center;
-    height: auto;
+    background-size: cover;  
+    background-position: top;
+    height: 100vh;
 }
 /*
 hero_image {
@@ -69,7 +68,6 @@ hero_image {
     position: relative;
     margin: 0px 20%;
     top: 200px;
-    z-index: 100;
 } 
 .about, .work, .misc {
     padding: 0px;
@@ -114,6 +112,13 @@ a:hover {
     "aboutMeImage"
     "aboutMeImage"
     "introP"; 
+}
+.miscGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 100px 10%;
+    grid-template-areas: 
 }
 
 #aboutMeImage {
