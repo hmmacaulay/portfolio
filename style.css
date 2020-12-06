@@ -13,10 +13,10 @@ body {
 } 
 .hero_image {
     background-image: url('website_images/about_bckgrnd.png');
-    background-color: E5E5E5;
+    background-color: #F6F2F3;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: contain;  
     background-position: center;
     height: auto;
 }
@@ -90,4 +90,65 @@ a {
 */
 a:hover {
     color: #FBE075;
+}
+/*--- about me page */
+
+/*
+.aboutMeImage {
+    display: flex;
+    margin: 100px 20%;
+    background-image: url('website_images/aboutMeImg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    min-height : 328px;
+    min-width: 486px;
+}
+*/
+.pageContentGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin: 100px 10%;
+    grid-template-areas: 
+    "aboutMeImage"
+    "aboutMeImage"
+    "introP"; 
+}
+
+#aboutMeImage {
+    grid-area: aboutMeImage;
+    background-image: url('website_images/aboutMeImg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: left;
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    .pageContentGrid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        margin: 100px 10%;
+        grid-template-areas: 
+        "aboutMeImage"
+        "introP"; 
+    }
+}
+
+#introP {
+    grid-area: introP;
+}
+
+h1 {
+    font-family: Calluna;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: Calluna;
+    font-size: 30px; 
 }
