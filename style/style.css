@@ -18,7 +18,7 @@ body {
 } 
 h1 {
     font-family: Calluna;
-    font-size: 50px;
+    font-size: large;
     color: #FBE075;
 }
 
@@ -46,6 +46,7 @@ a:hover {
     display: flex;
     position: fixed;
     padding: 10px;
+    margin-top: 10%;
 }
 .nav_link {
     color: white;
@@ -69,7 +70,7 @@ footer {
 }
 /* ------------------homepage -----------------------*/ 
 .hero_image {
-    background-image: url('website_images/about_bckgrnd.png');
+    background-image: url('../website_images/about_bckgrnd.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;  
@@ -158,7 +159,7 @@ a {
 
 #aboutMeImage {
     grid-area: aboutMeImage;
-    background-image: url('website_images/aboutMeImg.jpeg');
+    background-image: url('../website_images/aboutMeImg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-size: contain;  
@@ -184,7 +185,7 @@ a {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 100px 10%;
-    grid-template-areas: 
+    /* grid template areas */
 }
 
 #introP {
