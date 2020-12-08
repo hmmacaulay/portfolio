@@ -2,29 +2,31 @@
 /* ---------------------basics ----------------------*/
 /*
 * {
-    border: red;
+    border: #ff0000;
     border-style: solid;
 }
 */
 /* ---------------------basics ----------------------*/
 
 html {
-    background-color: #F6F2F3;
     height: 100vh;
 }
 body {
     height: 100vh;
     margin: 0;
+    font-size: 12px;
+    scroll-behavior: smooth;
 } 
 h1 {
     font-family: Calluna;
-    font-size: large;
+    font-size: 70px;
     color: #FBE075;
+    line-height: normal;
 }
 
 h2 {
     font-family: Calluna;
-    font-size: 30px; 
+    font-size: 20px; 
     color: #706262;
 }
 p {
@@ -38,18 +40,23 @@ li {
 }
 a:hover {
     color: #FBE075;
+    transition: all 300ms;
+}
+#nav_item:hover {
+    transform: rotate(1000 deg);
 }
 
-*/
 /* ------------------ navigation -------------------- */ 
 .nav {
     display: flex;
     position: fixed;
-    padding: 10px;
-    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    z-index: 1;
 }
 .nav_link {
-    color: white;
+    color: #5C5AD8;
     font-family: Calluna;
     font-size: 50px;
     text-decoration: none;
@@ -57,8 +64,8 @@ a:hover {
 }
 
 footer {
-    margin-top: 60vh;
-    padding: 5%;
+    margin-top: 70vh;
+    padding: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,13 +75,15 @@ footer {
     padding-left: 5px;
     padding-right: 5px;
 }
+
 /* ------------------homepage -----------------------*/ 
 .hero_image {
     background-image: url('../website_images/about_bckgrnd.png');
+    background-color: #F6F2F3;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: cover;  
-    background-position: top;
+    background-size: contain;  
+    background-position: right;
     height: 100vh;
 }
 /*
@@ -147,23 +156,46 @@ a {
     min-width: 486px;
 }
 */
+.about_me_body {
+    background: url('../website_images/about_me_.1.svg');
+    background-color: #FEFEFE;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    position: relative;
+    height: 100vh;
+}
+/*
+.about_me_body::after {
+    background-color: rgba(white, white,white, .3);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+} */
 .pageContentGrid {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    margin: 100px 10%;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 50%;
+    grid-gap: 10%;
+    margin: 1% 10%;
     grid-template-areas: 
-    "aboutMeImage"
-    "introP"; 
+    "introP aboutMeImage";
+}
+
+#introP {
+    grid-area: introP;
 }
 
 #aboutMeImage {
     grid-area: aboutMeImage;
     background-image: url('../website_images/aboutMeImg.jpeg');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-size: contain;  
-    background-position: left;
+    background-repeat: no-repeat; 
+    background-position: top;
+    border-radius: 1%;
 
 }
 
@@ -174,20 +206,111 @@ a {
         grid-template-columns: 1fr;
         margin: 5%;
         grid-template-areas: 
-        "aboutMeImage"
-        "introP"; 
+        "introP"
+        "aboutMeImage"; 
+    }
+    #aboutMeImage {
+        grid-area: aboutMeImage;
+        background-image: url('../website_images/aboutMeImg.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: center;  
+        background-position: center;
+        border-radius: 1%;
+    
     }
 }
 /* ------------------misc page -----------------------*/ 
 
 .miscGrid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5%;
     margin: 100px 10%;
-    /* grid template areas */
+    grid-template-areas: 
+    "miscHero miscHero gallery1 gallery1"
+    "gallery2 gallery2 gallery1 gallery1"
+    "gallery2 gallery2 gallery1 gallery1"
+    "gallery3 gallery3 gallery3 gallery3";
 }
 
-#introP {
-    grid-area: introP;
+#miscHero {
+    grid-area: miscHero;
+}
+#gallery1 {
+    grid-area: gallery1;
+    background-image: url('../website_images/gallery/zebra.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+}
+#gallery2 {
+    grid-area: gallery2;
+    background-image: url('../website_images/gallery/lunch.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+}
+#gallery3 {
+    grid-area: gallery3;
+    background-image: url('../website_images/gallery/natalie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+}
+
+/* ------------------gallery basics-----------------------*/
+#gallery_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 10;
+    background-color: rgba(0,0,0,0.2);
+}
+#subPageH1 {
+    display: flex;
+    justify-content: left;
+    margin-left: 10%;
+}
+/* ------------------work page -----------------------*/ 
+
+.workGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5%;
+    margin: 100px 10%;
+    grid-template-areas: 
+    "workHero workHero work_gallery1 work_gallery1"
+    "work_gallery2 work_gallery2 work_gallery1 work_gallery1"
+    "work_gallery2 work_gallery2 work_gallery3 work_gallery3"
+    "work_gallery2 work_gallery2 work_gallery3 work_gallery3" ;
+}
+
+#workHero {
+    grid-area: workHero;
+}
+#work_gallery1 {
+    grid-area: work_gallery1;
+    background-image: url('../../../case_study_img/Footprint/ftprnt.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: center;  
+    background-position: center;
+}
+#work_gallery2 {
+    grid-area: work_gallery2;
+    background-image: url('../../../case_study_img/Teensource/tnsrc.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+}
+#work_gallery3 {
+    grid-area: work_gallery3;
+    background-color: black;
 }
