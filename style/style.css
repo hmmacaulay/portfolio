@@ -22,6 +22,8 @@ h1 {
     font-size: 70px;
     color: #FBE075;
     line-height: normal;
+    margin: 5px;
+    padding-top: 2%;
 }
 
 h2 {
@@ -40,11 +42,11 @@ li {
 }
 a:hover {
     color: #FBE075;
-    transition: all 300ms;
+    /* transition: all 300ms; (will turn this back on once i can get the images to be cute */
 }
 #nav_item:hover {
     transform: rotate(1000 deg);
-}
+} 
 
 /* ------------------ navigation -------------------- */ 
 .nav {
@@ -62,7 +64,17 @@ a:hover {
     text-decoration: none;
     padding: 10px;
 }
-
+#nav_item {
+    image-rendering: -webkit-optimize-contrast;
+}
+/* nav explorations
+.hidden_menu {
+    opacity: 0;
+}
+nav:hover .hidden_menu {
+    opacity: 1;
+}
+*/
 footer {
     margin-top: 70vh;
     padding: 2%;
@@ -79,12 +91,14 @@ footer {
 /* ------------------homepage -----------------------*/ 
 .hero_image {
     background-image: url('../website_images/about_bckgrnd.png');
+    image-rendering: -webkit-optimize-contrast;
     background-color: #F6F2F3;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: contain;  
     background-position: right;
     height: 100vh;
+    opacity: 1;
 }
 /*
 hero_image {
@@ -133,6 +147,8 @@ hero_image {
     color: #706262;
     font-size: 70px;
 }
+
+
 /*
 a {
     font-family: Calluna;
@@ -158,6 +174,7 @@ a {
 */
 .about_me_body {
     background: url('../website_images/about_me_.1.svg');
+    image-rendering: -webkit-optimize-contrast;
     background-color: #FEFEFE;
     background-repeat: no-repeat;
     background-size: contain;
@@ -209,6 +226,7 @@ a {
         "introP"
         "aboutMeImage"; 
     }
+
     #aboutMeImage {
         grid-area: aboutMeImage;
         background-image: url('../website_images/aboutMeImg.jpeg');
@@ -268,13 +286,20 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin: 10;
-    background-color: rgba(0,0,0,0.2);
+    align-items: flex-end;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
 }
 #subPageH1 {
     display: flex;
     justify-content: left;
     margin-left: 10%;
+}
+#gallery_header {
+    opacity: 0;
+}
+.gallery_hover:hover #gallery_header {
+    opacity: 1;
 }
 /* ------------------work page -----------------------*/ 
 
@@ -297,18 +322,24 @@ a {
 #work_gallery1 {
     grid-area: work_gallery1;
     background-image: url('../../../case_study_img/Footprint/ftprnt.gif');
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: center;  
     background-position: center;
+    border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
 }
 #work_gallery2 {
     grid-area: work_gallery2;
-    background-image: url('../../../case_study_img/Teensource/tnsrc.gif');
+    background-image: url('../../../case_study_img/teensource/device_mashups.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;  
+    background-size: center;  
     background-position: center;
+    border-radius: 10px;
 }
 #work_gallery3 {
     grid-area: work_gallery3;
