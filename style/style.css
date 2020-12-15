@@ -16,7 +16,7 @@ body {
     margin: 0;
     font-size: 12px;
     position: relative
-    scroll-behavior: smooth;
+    /* scroll- smooth; */
 } 
 h1 {
     font-family: Calluna;
@@ -96,7 +96,7 @@ footer {
 
 /* ------------------homepage -----------------------*/ 
 .hero_image {
-    background-image: url('');
+    background-image: url('../website_images/about_bckgrnd.png');
     /* background-image: url('../website_images/about_bckgrnd.png'); */
     image-rendering: -webkit-optimize-contrast;
     /* animation: fadeIn ease 20s;
@@ -155,7 +155,7 @@ footer {
         
 }
 
- /* .hero_bckrnd {
+/* .hero_bckrnd {
     position: absolute;
     background-color:  #F6F2F3;
     display: flex;

@@ -17,7 +17,7 @@ $("body").on("click", function() {
 //work
 $('.menu_work').hover(function() {
     print("in the work hover function");
-    $('.hero_image').css({"background-image":"url(website_images/work.png)", "background-color": "#FFF2B2"});.fadeIn(3000);
+    $('.hero_image').css({"background-image":"url(website_images/work.png)", "background-color": "#FFF2B2"});
 });
 //about
 $('.menu_abt').hover(function() {
