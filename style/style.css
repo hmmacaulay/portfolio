@@ -15,38 +15,41 @@ body {
     height: 100vh;
     margin: 0;
     font-size: 12px;
+    position: relative
     scroll-behavior: smooth;
 } 
 h1 {
     font-family: Calluna;
     font-size: 70px;
     color: #FBE075;
-    line-height: normal;
-    margin: 5px;
-    padding-top: 2%;
+    line-height: 70px;
 }
 
 h2 {
     font-family: Calluna;
     font-size: 20px; 
     color: #706262;
+    line-height: 20px;
 }
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+    Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #706262;
-    padding-top: 2%;
+    font-size: 14px;
 }
 li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+    Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #706262;
+    font-size: 14px;
 }
 a:hover {
     color: #FBE075;
     /* transition: all 300ms; (will turn this back on once i can get the images to be cute */
 }
-#nav_item:hover {
+/* #nav_item:hover {
     transform: rotate(1000 deg);
-} 
+}  */
 
 /* ------------------ navigation -------------------- */ 
 .nav {
@@ -76,12 +79,15 @@ nav:hover .hidden_menu {
 }
 */
 footer {
-    margin-top: 70vh;
+    margin-top: 100vh;
     padding: 2%;
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: white;
+    position: absolute;
+    z-index: 4;
 }
 #footer_item {
     padding-left: 5px;
@@ -90,16 +96,75 @@ footer {
 
 /* ------------------homepage -----------------------*/ 
 .hero_image {
-    background-image: url('../website_images/about_bckgrnd.png');
+    background-image: url('');
+    /* background-image: url('../website_images/about_bckgrnd.png'); */
     image-rendering: -webkit-optimize-contrast;
+    /* animation: fadeIn ease 20s;
+    -webkit-animation: fadeIn ease 20s;
+    -moz-animation: fadeIn ease 20s;
+    -o-animation: fadeIn ease 20s;
+    -ms-animation: fadeIn ease 20s; */
     background-color: #F6F2F3;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: contain;  
     background-position: right;
     height: 100vh;
-    opacity: 1;
+    position: relative;
+    z-index: 1;
 }
+@media only screen and (max-width: 800px) {
+    .hero_image {
+        background-image: url('');
+        /* background-image: url('../website_images/about_bckgrnd.png'); */
+        image-rendering: -webkit-optimize-contrast;
+        background-color: #F6F2F3;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: center;  
+        background-position: right;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+    }
+    .menu {
+        background-position: left;
+        background-color:  rgba(255, 255, 255, 0.575);
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: left;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0px 20%;
+        top: 200px;
+        position: relative;
+        z-index: 3;
+    } 
+    /* .hero_bckrnd {
+        position: absolute;
+        background-color:  #F6F2F3;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        opacity: .5;
+        z-index: 2;
+    }  */
+        
+}
+
+ /* .hero_bckrnd {
+    position: absolute;
+    background-color:  #F6F2F3;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    opacity: .5;
+    z-index: 2;
+}     */
 /*
 hero_image {
     background-image: url();
@@ -137,6 +202,9 @@ hero_image {
     position: relative;
     margin: 0px 20%;
     top: 200px;
+    position: relative;
+    z-index: 3;
+    opacity: 1;
 } 
 .about, .work, .misc {
     padding: 0px;
@@ -158,6 +226,22 @@ a {
 }
 */
 
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%, 0);
+    }
+} */
+
 /* ------------------about me page -----------------------*/ 
 
 /*
@@ -177,7 +261,7 @@ a {
     image-rendering: -webkit-optimize-contrast;
     background-color: #FEFEFE;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: center;
     background-position: top;
     position: relative;
     height: 100vh;
@@ -197,7 +281,7 @@ a {
     grid-template-rows: 100%;
     grid-template-columns: 40% 50%;
     grid-gap: 10%;
-    margin: 1% 10%;
+    padding: 5%;
     grid-template-areas: 
     "introP aboutMeImage";
 }
@@ -221,7 +305,7 @@ a {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
-        margin: 5%;
+        padding: 5%;
         grid-template-areas: 
         "introP"
         "aboutMeImage"; 
@@ -245,12 +329,26 @@ a {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
-    margin: 100px 10%;
+    padding: 100px 10%; 
     grid-template-areas: 
     "miscHero miscHero gallery1 gallery1"
     "gallery2 gallery2 gallery1 gallery1"
     "gallery2 gallery2 gallery1 gallery1"
     "gallery3 gallery3 gallery3 gallery3";
+}
+@media only screen and (max-width: 800px) {
+    .miscGrid {
+        display: grid;
+        grid-template-rows: 100px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-gap: 5%;
+        padding: 100px 10%;
+        grid-template-areas: 
+        "miscHero"
+        "gallery1"
+        "gallery2"
+        "gallery3" ;
+    }
 }
 
 #miscHero {
@@ -261,38 +359,46 @@ a {
     background-image: url('../website_images/gallery/zebra.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;  
+    background-size: center;  
     background-position: center;
+    border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
 }
 #gallery2 {
     grid-area: gallery2;
     background-image: url('../website_images/gallery/lunch.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;  
+    background-size: center;  
     background-position: center;
+    border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
 }
 #gallery3 {
     grid-area: gallery3;
     background-image: url('../website_images/gallery/natalie.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: contain;  
+    background-size: center;  
     background-position: center;
+    border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* ------------------gallery basics-----------------------*/
 #gallery_header {
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
-    justify-content: left;
-    align-items: flex-end;
-    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.918);
     border-radius: 10px;
 }
 #subPageH1 {
-    display: flex;
-    justify-content: left;
+    display: block;
+    justify-content: right;
     margin-left: 10%;
 }
 #gallery_header {
@@ -308,12 +414,27 @@ a {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
-    margin: 100px 10%;
+    padding: 100px 10%;
     grid-template-areas: 
     "workHero workHero work_gallery1 work_gallery1"
     "work_gallery2 work_gallery2 work_gallery1 work_gallery1"
     "work_gallery2 work_gallery2 work_gallery3 work_gallery3"
     "work_gallery2 work_gallery2 work_gallery3 work_gallery3" ;
+}
+
+@media only screen and (max-width: 800px) {
+    .workGrid {
+        display: grid;
+        grid-template-rows: 100px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-gap: 5%;
+        padding: 100px 10%;
+        grid-template-areas: 
+        "workHero"
+        "work_gallery1"
+        "work_gallery2"
+        "work_gallery3" ;
+    }
 }
 
 #workHero {
@@ -323,7 +444,7 @@ a {
     grid-area: work_gallery1;
     background-image: url('../../../case_study_img/Footprint/ftprnt.gif');
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -335,13 +456,25 @@ a {
 #work_gallery2 {
     grid-area: work_gallery2;
     background-image: url('../../../case_study_img/teensource/device_mashups.png');
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: center;  
     background-position: center;
     border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
 }
 #work_gallery3 {
-    grid-area: work_gallery3;
-    background-color: black;
+    background-image: url('../../../case_study_img/teensource/device_mashups.png');
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: center;  
+    background-position: center;
+    border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
 }
