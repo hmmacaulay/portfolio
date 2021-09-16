@@ -30,6 +30,24 @@ $('.menu_misc').hover(function() {
     $('.hero_image').css({"background-image":"url(website_images/misc.png)", "background-color": "#DAECAB"});
 });
 
+
+///about hover 
+
+$('#hamburger').click(function() {
+    print("in function");
+
+    // $(".about_me_body").addClass("active");
+    // if ($(".about_me_body").hasClass("active")) {
+    //     print("in if statement");
+        $(".about_me_body").css("height","100vh");
+        $("pageContentGrid").css("opacity","1");
+    
+    // } else {
+    //     $(".about_me_body").css("height","0vh");
+    //     $("pageContentGrid").css("opacity","0");
+    // }
+
+});
 //animations (need to basically create divs for background colors and have them fade in and out)
 // $('.menu_work').hover(function() {
 //     $('.hero_image').css({"opacity":"0"});

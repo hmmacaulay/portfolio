@@ -3,24 +3,52 @@
     <title>hmm</title>
     <link rel="icon" href="website_images/thumbnail.png">
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="description" content="UX design portfolio">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Hannah Macaulay">
-    <script src="script/jquery-3.5.1.min.js"></script>
-    <script src="script/functions.js"></script>
+
 </head>
-    <body>
-        <div class="nav">
-            <a href="" id="nav_item">
-                <img src="website_images/menu.svg" alt="menu" style="width:40px;height:40px;">
-            </a>
-            <a href="index.html" class="nav_link">hmm</a>
-            <!--<a href="#" class="nav_link">contact</a> --->
+    <body id="aboutBody">
+        <!-- NAVBAR VERSION ! -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">hmm</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="about.html">about</a>
+                  <a class="nav-link" href="work.html">work</a>
+                  <a class="nav-link" href="misc.html">misc.</a>
+                  <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- END OF NAVBAR -->
+        <div id="introP">
+            <h1> hey, </h1>
+            <h2> thanks for stopping by. i'm hannah m. macaulay (hmm). </h2>
+            <p> I currently work in UX at Facebook. Before Facebook, I learned a lot about cognitive neuroscience and entrepreneurship. Way before that, I was a kid in Colorado with a backyard fort on the mountain and a messy art room in the basement. </p>
+            <p> I like to use my powers for good. </p>
+            <p>Because I can probably ask for your attention for only a couple more seconds, I’ll make this quick. </p>
+            <p>I believe that:</p>
+            <ul id="beliefList">
+                <li>the books are better than the movies</li>
+                <li>everyone should watch Ugly Delicious & Dear White People on Netflix</li>
+                <li>no problem can be solved alone </li>
+                <li>the “future [can be] female” when ALL women are included </li>
+                <li>we should stop eating octopus </li>
+                <li>we should buy more used clothing </li>
+                <li>we stopped trusting each other when we stopped watching movies together on plane rides </li>
+            </ul>
+            <p>thanks for taking the time to learn more about me & my work. let me know what questions you have!</p>
         </div>
-        <section class="about_me_body" id="about_me_background_color">
-        <section class="pageContentGrid">
+        <!-- <section class="pageContentGrid">
             <div id="aboutMeImage">
                 <p>  </p>
             </div>
@@ -42,8 +70,7 @@
                 </ul>
                 <p>thanks for taking the time to learn more about me & my work. let me know what questions you have!</p>
             </div>
-        </section>
-    </section>
+        </section> -->
 
         <!-- <footer>
             <a href="https://github.com/hmmacaulay" id="footer_item">
@@ -62,5 +89,8 @@
                 <img src="website_images/fi_paperclip.svg" alt="github" style="width:20px;height:20px;">
             </a>
         </footer> -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="script/functions.js"></script>
 
     </body>

@@ -1,11 +1,11 @@
 
 /* ---------------------basics ----------------------*/
-/*
-* {
+
+/* * {
     border: #ff0000;
     border-style: solid;
-}
-*/
+} */
+
 /* ---------------------basics ----------------------*/
 
 html {
@@ -16,8 +16,8 @@ body {
     margin: 0;
     font-size: 12px;
     position: relative
-    /* scroll- smooth; */
 } 
+
 h1 {
     font-family: Calluna;
     font-size: 70px;
@@ -45,6 +45,8 @@ li {
 }
 a:hover {
     color: #FBE075;
+    text-decoration: none;
+    transition: all 0s;
     /* transition: all 300ms; (will turn this back on once i can get the images to be cute */
 }
 /* #nav_item:hover {
@@ -60,12 +62,36 @@ a:hover {
     padding: 5px;
     z-index: 1;
 }
+.navbar {
+    display: flex; 
+    position: fixed;
+    background-color: transparent !important;
+}
+.navbar-brand {
+    font-family: Calluna;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: transparent; 
+}
 .nav_link {
+    font-family: Calluna;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-link {
     color: #5C5AD8;
     font-family: Calluna;
     font-size: 50px;
     text-decoration: none;
     padding: 10px;
+    background-color: transparent; 
+}
+.nav-link:hover {
+    color: #FBE075 important!;
+    text-decoration: none;
+    transition: all 0s;
 }
 #nav_item {
     image-rendering: -webkit-optimize-contrast;
@@ -256,6 +282,12 @@ a {
     min-width: 486px;
 }
 */
+
+/* #aboutBody {
+    height: 0vh;
+    opacity: 1;
+} */
+
 .about_me_body {
     background: url('../website_images/about_me_.1.svg');
     image-rendering: -webkit-optimize-contrast;
@@ -284,6 +316,7 @@ a {
     padding: 5%;
     grid-template-areas: 
     "introP aboutMeImage";
+    opacity: 1;
 }
 
 #introP {
@@ -326,33 +359,40 @@ a {
 
 .miscGrid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5%;
-    padding: 100px 10%; 
+    grid-gap: 1%;
+    padding: 20% 20%; 
     grid-template-areas: 
     "miscHero miscHero gallery1 gallery1"
     "gallery2 gallery2 gallery1 gallery1"
     "gallery2 gallery2 gallery1 gallery1"
-    "gallery3 gallery3 gallery3 gallery3";
+    "gallery3 gallery3 gallery3 gallery3"
+    "gallery3 gallery3 gallery3 gallery3"
+    "gallery4 gallery4 gallery5 gallery5"
+    "gallery4 gallery4 gallery5 gallery5"
+    "gallery4 gallery4 . ."
 }
 @media only screen and (max-width: 800px) {
     .miscGrid {
         display: grid;
-        grid-template-rows: 100px 300px 300px 300px;
+        grid-template-rows: 100px 300px 300px 300px 300px;
         grid-template-columns: 1fr;
         grid-gap: 5%;
-        padding: 100px 10%;
+        padding: 20% 20%;
         grid-template-areas: 
         "miscHero"
         "gallery1"
         "gallery2"
-        "gallery3" ;
+        "gallery3" 
+        "gallery4"
+        "gallery5";
     }
 }
 
 #miscHero {
     grid-area: miscHero;
+    text-align: center;
 }
 #gallery1 {
     grid-area: gallery1;
@@ -361,7 +401,7 @@ a {
     background-repeat: no-repeat;
     background-size: center;  
     background-position: center;
-    border-radius: 10px;
+    border-radius: 5px;
     image-rendering: -webkit-optimize-contrast;
 }
 #gallery2 {
@@ -371,7 +411,7 @@ a {
     background-repeat: no-repeat;
     background-size: center;  
     background-position: center;
-    border-radius: 10px;
+    border-radius: 5px;
     image-rendering: -webkit-optimize-contrast;
 }
 #gallery3 {
@@ -381,10 +421,29 @@ a {
     background-repeat: no-repeat;
     background-size: center;  
     background-position: center;
-    border-radius: 10px;
+    border-radius: 5px;
     image-rendering: -webkit-optimize-contrast;
 }
-
+#gallery4 {
+    grid-area: gallery4;
+    background-image: url('../website_images/gallery/band.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: center;  
+    background-position: center;
+    border-radius: 5px;
+    image-rendering: -webkit-optimize-contrast;
+}
+#gallery5 {
+    grid-area: gallery5;
+    background-image: url('../website_images/gallery/carbondale.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: center;  
+    background-position: center;
+    border-radius: 5px;
+    image-rendering: -webkit-optimize-contrast;
+}
 /* ------------------gallery basics-----------------------*/
 #gallery_header {
     display: flex;
@@ -394,7 +453,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.918);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 #subPageH1 {
     display: block;
@@ -407,6 +466,23 @@ a {
 .gallery_hover:hover #gallery_header {
     opacity: 1;
 }
+
+.btn-primary {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #706262;
+    font-size: 14px;
+    background-color: #FBE075;
+    border-color: #FBE075;
+}
+.btn-primary:hover {
+    background-color: #706262;
+    border-color: #706262;
+}
+.modal-content {
+    padding: 100px;
+}
+
 /* ------------------work page -----------------------*/ 
 
 .workGrid {
@@ -414,7 +490,7 @@ a {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5%;
-    padding: 100px 10%;
+    padding: 20% 20%;
     grid-template-areas: 
     "workHero workHero work_gallery1 work_gallery1"
     "work_gallery2 work_gallery2 work_gallery1 work_gallery1"
